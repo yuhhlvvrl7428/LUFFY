@@ -46,7 +46,6 @@ LUFFY/
 - API integrations (OpenAI, Gemini) are currently placeholder implementations
 - FSDP and distributed training features need completion
 
-
 ### 🔴 High Priority TODOs
 
 - **API Integration**: OpenAI and Gemini API implementations need completion
@@ -54,8 +53,7 @@ LUFFY/
 - **FSDP Training**: Model loading and distributed training setup
 - **Data Processing**: Batch dimension operations and tensor reshaping
 
-### 📝 Complete TODO List
-### 📝 Complete TODO List
+## 📝 Complete TODO List
 
 - [ ] **luffy/deepscaler/utils.py:45** - Add logging for API calls and errors
 - [ ] **luffy/deepscaler/utils.py:46** - Support batch processing for multiple prompts
@@ -303,4 +301,3 @@ LUFFY/
 2. Implement the functionality
 3. Test your implementation
 4. Update this README when TODOs are completed
-
