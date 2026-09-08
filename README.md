@@ -55,23 +55,19 @@ LUFFY/
 - **Data Processing**: Batch dimension operations and tensor reshaping
 
 ### 📝 Complete TODO List
+### 📝 Complete TODO List
 
-- [ ] **luffy/deepscaler/utils.py:45** - Implement OpenAI API client initialization
-- [ ] **luffy/deepscaler/utils.py:46** - Add proper authentication handling
-- [ ] **luffy/deepscaler/utils.py:47** - Implement exponential backoff retry logic for rate limits
-- [ ] **luffy/deepscaler/utils.py:48** - Add comprehensive error handling for different API errors
-- [ ] **luffy/deepscaler/utils.py:49** - Implement response parsing and validation
-- [ ] **luffy/deepscaler/utils.py:50** - Add logging for API calls and errors
-- [ ] **luffy/deepscaler/utils.py:51** - Support batch processing for multiple prompts
-- [ ] **luffy/deepscaler/utils.py:52** - Add timeout configuration for API calls
-- [ ] **luffy/deepscaler/utils.py:88** - Implement Vertex AI initialization and authentication
-- [ ] **luffy/deepscaler/utils.py:89** - Configure safety settings for content generation
-- [ ] **luffy/deepscaler/utils.py:90** - Set up GenerativeModel with proper system instructions
-- [ ] **luffy/deepscaler/utils.py:91** - Implement retry logic with exponential backoff
-- [ ] **luffy/deepscaler/utils.py:92** - Add comprehensive error handling for API access issues
-- [ ] **luffy/deepscaler/utils.py:93** - Handle rate limiting and quota management
-- [ ] **luffy/deepscaler/utils.py:94** - Implement response validation and text extraction
-- [ ] **luffy/deepscaler/utils.py:95** - Add support for different generation configurations
+- [ ] **luffy/deepscaler/utils.py:45** - Add logging for API calls and errors
+- [ ] **luffy/deepscaler/utils.py:46** - Support batch processing for multiple prompts
+- [ ] **luffy/deepscaler/utils.py:47** - Add timeout configuration for API calls
+- [ ] **luffy/deepscaler/utils.py:107** - Implement Vertex AI initialization and authentication
+- [ ] **luffy/deepscaler/utils.py:108** - Configure safety settings for content generation
+- [ ] **luffy/deepscaler/utils.py:109** - Set up GenerativeModel with proper system instructions
+- [ ] **luffy/deepscaler/utils.py:110** - Implement retry logic with exponential backoff
+- [ ] **luffy/deepscaler/utils.py:111** - Add comprehensive error handling for API access issues
+- [ ] **luffy/deepscaler/utils.py:112** - Handle rate limiting and quota management
+- [ ] **luffy/deepscaler/utils.py:113** - Implement response validation and text extraction
+- [ ] **luffy/deepscaler/utils.py:114** - Add support for different generation configurations
 - [ ] **luffy/test.py:1590** - add smaller page sizes when https://github.com/Dao-AILab/flash-attention/pull/824 is merged
 - [ ] **luffy/verl/examples/split_placement/split_monkey_patch.py:141** - make a canonical logger that supports various backend
 - [ ] **luffy/verl/tests/e2e/check_results.py:21** - this function needs error handling
@@ -110,19 +106,13 @@ LUFFY/
 - [ ] **luffy/verl/verl/models/llama/megatron/modeling_llama_megatron.py:588** - for better performance, the sp padding should be removed at each layer. Not sure the performance gap
 - [ ] **luffy/verl/verl/models/registry.py:21** - (sgm): HF may supported more than listed here, we should add more after testing
 - [ ] **luffy/verl/verl/models/transformers/llama.py:88** - These transpose are quite inefficient but Flash Attention requires the layout [batch_size, sequence_length, num_heads, head_dim]. We would need to refactor the KV cache
-- [ ] **luffy/verl/verl/protocol.py:114** - Implement batch dimension folding for efficient processing
-- [ ] **luffy/verl/verl/protocol.py:115** - Add validation for batch size compatibility
-- [ ] **luffy/verl/verl/protocol.py:116** - Handle edge cases where batch_size is not divisible by new_batch_size
-- [ ] **luffy/verl/verl/protocol.py:117** - Optimize memory usage during tensor reshaping
-- [ ] **luffy/verl/verl/protocol.py:118** - Add support for different tensor types and shapes
-- [ ] **luffy/verl/verl/protocol.py:131** - Implement batch dimension unfolding functionality
-- [ ] **luffy/verl/verl/protocol.py:132** - Add support for variable batch dimensions
-- [ ] **luffy/verl/verl/protocol.py:133** - Optimize tensor view operations for performance
-- [ ] **luffy/verl/verl/protocol.py:134** - Handle non-tensor batch data reshaping properly
-- [ ] **luffy/verl/verl/protocol.py:135** - Add error handling for invalid batch dimensions
-- [ ] **luffy/verl/verl/protocol.py:156** - (zhangchi.usc1992) add consistency check
-- [ ] **luffy/verl/verl/protocol.py:252** - we can actually lift this restriction if needed
-- [ ] **luffy/verl/verl/protocol.py:338** - (zhangchi.usc1992) whether to copy
+- [ ] **luffy/verl/verl/protocol.py:114** - Optimize memory usage during tensor reshaping
+- [ ] **luffy/verl/verl/protocol.py:115** - Add support for different tensor types and shapes
+- [ ] **luffy/verl/verl/protocol.py:136** - Optimize tensor view operations for performance
+- [ ] **luffy/verl/verl/protocol.py:137** - Add error handling for invalid batch dimensions
+- [ ] **luffy/verl/verl/protocol.py:169** - (zhangchi.usc1992) add consistency check
+- [ ] **luffy/verl/verl/protocol.py:265** - we can actually lift this restriction if needed
+- [ ] **luffy/verl/verl/protocol.py:351** - (zhangchi.usc1992) whether to copy
 - [ ] **luffy/verl/verl/single_controller/ray/base.py:439** - create a class with customizable name
 - [ ] **luffy/verl/verl/third_party/vllm/vllm_v_0_3_1/arg_utils.py:64** - (shengguangming): delete the unused args
 - [ ] **luffy/verl/verl/third_party/vllm/vllm_v_0_3_1/arg_utils.py:147** - (woosuk): Support fine-grained seeds (e.g., seed per request).
@@ -161,6 +151,8 @@ LUFFY/
 - [ ] **luffy/verl/verl/third_party/vllm/vllm_v_0_4_2/megatron_weight_loaders.py:67** - check megatron
 - [ ] **luffy/verl/verl/third_party/vllm/vllm_v_0_4_2/megatron_weight_loaders.py:254** - need to implement a general way to deal with prefix
 - [ ] **luffy/verl/verl/third_party/vllm/vllm_v_0_4_2/megatron_weight_loaders.py:272** - (shengguangming): latest commit in vllm fix awq for this function and add load_weights
+- [ ] **luffy/verl/verl/third_party/vllm/vllm_v_0_4_2/megatron_weight_loaders.py:325** - (pad to be divided by 4)
+- [ ] **luffy/verl/verl/third_party/vllm/vllm_v_0_4_2/megatron_weight_loaders.py:337** - remove dependencies from megatron
 - [ ] **luffy/verl/verl/third_party/vllm/vllm_v_0_4_2/model_loader.py:141** - (sgm): This is a hack, we need to register the load_weight() func for each model in vllm
 - [ ] **luffy/verl/verl/third_party/vllm/vllm_v_0_4_2/model_loader.py:226** - (sgm): This is a hack, we need to register the load_weight() func for each model in vllm
 - [ ] **luffy/verl/verl/third_party/vllm/vllm_v_0_4_2/model_runner.py:274** - (sgm): perform sampling on rank 0
@@ -203,6 +195,29 @@ LUFFY/
 - [ ] **luffy/verl/verl/third_party/vllm/vllm_v_0_5_4/worker.py:84** - we don't need driver
 - [ ] **luffy/verl/verl/third_party/vllm/vllm_v_0_5_4/worker.py:103** - (sgm): set correct model runner class
 - [ ] **luffy/verl/verl/third_party/vllm/vllm_v_0_5_4/worker.py:301** - (sgm): check whether need this
+- [ ] **luffy/verl/verl/third_party/vllm/vllm_v_0_6_3/llm.py:147** - check usagecontext
+- [ ] **luffy/verl/verl/third_party/vllm/vllm_v_0_6_3/llm.py:170** - (sgm): we can optimize it by making the dataloader yield List[int] without padding.
+- [ ] **luffy/verl/verl/third_party/vllm/vllm_v_0_6_3/llm.py:186** - (shengguangming): can be optimzied by rewrite the Sampler._get_logprobs() logits
+- [ ] **luffy/verl/verl/third_party/vllm/vllm_v_0_6_3/llm_engine_sp.py:174** - (woosuk): Print more configs in debug mode.
+- [ ] **luffy/verl/verl/third_party/vllm/vllm_v_0_6_3/llm_engine_sp.py:336** - (sgm): add for verl but we may not tokenizer in Rollout
+- [ ] **luffy/verl/verl/third_party/vllm/vllm_v_0_6_3/llm_engine_sp.py:345** - check whether we should rebuild the CUDAGraph every iter when offload/load KVCache
+- [ ] **luffy/verl/verl/third_party/vllm/vllm_v_0_6_3/megatron_weight_loaders.py:68** - check megatron
+- [ ] **luffy/verl/verl/third_party/vllm/vllm_v_0_6_3/megatron_weight_loaders.py:255** - need to implement a general way to deal with prefix
+- [ ] **luffy/verl/verl/third_party/vllm/vllm_v_0_6_3/megatron_weight_loaders.py:273** - (shengguangming): latest commit in vllm fix awq for this function and add load_weights
+- [ ] **luffy/verl/verl/third_party/vllm/vllm_v_0_6_3/model_loader.py:170** - (sgm): This is a hack, we need to register the load_weight() func for each model in vllm
+- [ ] **luffy/verl/verl/third_party/vllm/vllm_v_0_6_3/model_loader.py:273** - (sgm): This is a hack, we need to register the load_weight() func for each model in vllm
+- [ ] **luffy/verl/verl/third_party/vllm/vllm_v_0_6_3/parallel_state.py:97** - (sgm): deviate from the v0.5.4, not pp now
+- [ ] **luffy/verl/verl/third_party/vllm/vllm_v_0_6_3/parallel_state.py:144** - check why True is not work in Ray trainer
+- [ ] **luffy/verl/verl/third_party/vllm/vllm_v_0_6_3/parallel_state.py:172** - check why True is not work in Ray trainer
+- [ ] **luffy/verl/verl/third_party/vllm/vllm_v_0_6_3/parallel_state.py:185** - init using device mesh (not support hybrid engine now)
+- [ ] **luffy/verl/verl/third_party/vllm/vllm_v_0_6_3/parallel_state.py:257** - check why True is not work in Ray trainer
+- [ ] **luffy/verl/verl/third_party/vllm/vllm_v_0_6_3/parallel_state.py:262** - init using device mesh (not support hybrid engine now)
+- [ ] **luffy/verl/verl/third_party/vllm/vllm_v_0_6_3/spmd_gpu_executor.py:73** - (sgm): verl not support speculative decode now
+- [ ] **luffy/verl/verl/third_party/vllm/vllm_v_0_6_3/spmd_gpu_executor.py:246** - (sgm): not implemented async executor yet
+- [ ] **luffy/verl/verl/third_party/vllm/vllm_v_0_6_3/worker.py:33** - (sgm): check why vllm has similar file in vllm.model_executor.parallel_utils.parallel_state
+- [ ] **luffy/verl/verl/third_party/vllm/vllm_v_0_6_3/worker.py:92** - we don't need driver
+- [ ] **luffy/verl/verl/third_party/vllm/vllm_v_0_6_3/worker.py:110** - (sgm): set correct model runner class
+- [ ] **luffy/verl/verl/third_party/vllm/vllm_v_0_6_3/worker.py:311** - (sgm): check whether need this
 - [ ] **luffy/verl/verl/trainer/fsdp_sft_trainer.py:77** - add checkpoint manager
 - [ ] **luffy/verl/verl/trainer/fsdp_sft_trainer.py:140** - (zhangchi.usc1992):
 - [ ] **luffy/verl/verl/trainer/fsdp_sft_trainer.py:159** - Implement model loading with proper initialization context
@@ -282,7 +297,6 @@ LUFFY/
 - [ ] **luffy/verl/verl/workers/sharding_manager/megatron_vllm.py:76** - after binding to the memory buffer, we can load the checkpoint here
 - [ ] **luffy/verl/verl/workers/sharding_manager/megatron_vllm.py:253** - (sgm): this may not be true for FSDP -> vLLM
 - [ ] **luffy/verl/verl/workers/sharding_manager/megatron_vllm.py:323** - (zhangchi.usc1992) We can consider copy non-tp weight to another infer buffer.
-
 ## 🤝 Contributing
 
 1. Pick a TODO item from the list above
